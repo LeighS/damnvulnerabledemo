@@ -30,7 +30,7 @@ jobs:
     name: Parse & Check Terraform Changes
     defaults:
       run:
-        working-directory: 'Terraform/'
+        working-directory: 'Terraform'
     steps:
     - uses: actions/checkout@v2
     - uses: hashicorp/setup-terraform@v1
@@ -39,7 +39,7 @@ jobs:
     - uses: reviewdog/action-tfsec@master
       with:
         github_token: ${{ secrets.github_token }}
-        working_directory: src # Change working directory
+        working_directory: Terraform # Change working directory
         level: info # Get more output from reviewdog
         reporter: github-pr-review # Change reviewdog reporter
         filter_mode: nofilter # Check all files, not just the diff
@@ -52,7 +52,7 @@ jobs:
       uses: reviewdog/action-tflint@master
       with:
         github_token: ${{ secrets.github_token }}
-        working_directory: "src" # Optional. Change working directory
+        working_directory: "Terraform" # Optional. Change working directory
         reporter: github-pr-review # Optional. Change reporter
         fail_on_error: "true" # Optional. Fail action if errors are found
         filter_mode: "nofilter" # Optional. Check all files, not just the diff
