@@ -76,7 +76,7 @@ namespace OWASP.WebGoat.NET.App_Code.DB
             string encoded_password = Encoder.Encode(password);
             
             //check email/password
-            string sql = "select * from CustomerLogin where email = '" + email + "' and password = '" + 
+            string sql = "select * from dbo.CustomerLogin where email = '" + email + "' and password = '" + 
                          encoded_password + "';";
                         
             using (SqliteConnection connection = new SqliteConnection(_connectionString))
