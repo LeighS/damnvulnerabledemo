@@ -14,10 +14,11 @@ jobs:
 
     - name: Check for secrets
       uses: reviewdog/action-detect-secrets@master
-      continue-on-error: false
       with:
         github_token: ${{ secrets.github_token }}
-        reporter: github-pr-review # Change reporter.    
+        reporter: github-pr-review # Change reporter.  
+        fail_on_error: true  
+
 
 
     - name: Check for spelling mistakes
