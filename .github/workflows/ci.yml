@@ -30,7 +30,7 @@ jobs:
     name: Parse & Check Terraform Changes
     defaults:
       run:
-        working-directory: ${{ env.tf_actions_working_dir }}
+        working-directory: 'Terraform/'
     steps:
     - uses: actions/checkout@v2
     - uses: hashicorp/setup-terraform@v1
