@@ -48,7 +48,14 @@ jobs:
         fail_on_error: true # Fail action if errors are found
         flags: -tee # Add debug flag to reviewdog
         tfsec_flags: "" # Optional
+        sarif_file: tfsec.sarif    
 
+    - name: Upload SARIF file
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+        # Path to SARIF file relative to the root of the repository
+        sarif_file: tfsec.sarif    
+        
     # run tf lint to check formatting and style
     - name: tflint
       uses: reviewdog/action-tflint@master
