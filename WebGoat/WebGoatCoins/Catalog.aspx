@@ -1,8 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Resources/Master-Pages/Site.Master" AutoEventWireup="true" CodeBehind="Catalog.aspx.cs" Inherits="OWASP.WebGoat.NET.WebGoatCoins.Catalog" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContentPlaceHolder" runat="server">
 </asp:Content>
+<!-- This is hte help content placeholder -->
 <asp:Content ID="Content2" ContentPlaceHolderID="HelpContentPlaceholder" runat="server">
 </asp:Content>
+<!-- This is the body -->
 <asp:Content ID="Content3" ContentPlaceHolderID="BodyContentPlaceholder" runat="server">
         <h1 class="title-regular-4 clearfix">Product Catalog</h1>
         <div class="notice">
