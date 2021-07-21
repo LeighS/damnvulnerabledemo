@@ -53,7 +53,7 @@ jobs:
       uses: github/codeql-action/upload-sarif@v1
       with:
         # Path to SARIF file relative to the root of the repository
-        sarif_file: tfsec.sarif    
+        sarif_file: Terraform/tfsec.sarif    
         
     # run tf lint to check formatting and style
     - name: tflint
