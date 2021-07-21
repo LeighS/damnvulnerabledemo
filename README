@@ -1,3 +1,11 @@
+Originall Code from
+***************************** Webgoat.NET **********************************
+https://github.com/jerryhoff/WebGoat.NET
+
+This code has been updated from the original to  demonstrate some security 
+features within Azure and GitHub and should never ever be used in production 
+for any purpose. 
+
 ***************************** Webgoat.NET **********************************
 * Source Code: https://github.com/jerryhoff/WebGoat.NET
 * Download zip: https://github.com/jerryhoff/WebGoat.NET/zipball/master
