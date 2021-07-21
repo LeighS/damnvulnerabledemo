@@ -49,12 +49,6 @@ jobs:
         flags: -tee # Add debug flag to reviewdog
         tfsec_flags: "sarif_file=tfsec.sarif"
 
-    - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v1
-      with:
-        # Path to SARIF file relative to the root of the repository
-        sarif_file: Terraform/tfsec.sarif    
-        
     # run tf lint to check formatting and style
     - name: tflint
       uses: reviewdog/action-tflint@master
